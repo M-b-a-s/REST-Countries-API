@@ -1,10 +1,11 @@
-import data from "../data.json";
 
-const Countries = () => {
+const Countries = ({ data, searchCountry, isTyping }) => {
+    const filteredCountries = data.filter((country) => 
+    isTyping ? country.name.toLowerCase().includes(searchCountry.toLowerCase()) : true)
   return (
     <div className="text-white grid place-items-center">
       <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {data.map((country, idx) => (
+        {filteredCountries.map((country, idx) => (
           <li key={idx}>
             <div className="bg-slate-800 grid grid-rows-2 w-[280px] h-[350px] rounded hover:animate-pulse hover:cursor-pointer overflow-hidden">
               <div>

@@ -11,6 +11,7 @@ const App = () => {
   const handleTyping = (typing) => {
     setIsTyping(typing);
   };
+  
   return (
     <div className="bg-slate-900 p-4 relative">
       <Navbar />

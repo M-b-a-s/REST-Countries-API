@@ -1,6 +1,7 @@
 import { BsSearch } from "react-icons/bs";
 
 const SearchBar = ({ searchCountry, onSearchChange, onUserTyping }) => {
+    
   const handleInputChange = (e) => {
     onUserTyping(true);
     onSearchChange(e.target.value);
